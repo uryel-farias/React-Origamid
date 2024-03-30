@@ -26,8 +26,16 @@ const mario = {
 const App = () => {
   const dados = mario;
 
-  
-  return 
+  const total = dados.compras.map((item) => Number(item.preco.replace('R$ ',''))).reduce((a, b) => a + b);
+
+  console.log(total);
+  return (
+    <div>
+      <p>Nome: {dados.cliente}</p>
+      <p>Idade: {dados.idade}</p>
+      <p>Total: {dados.total}</p>
+    </div>
+  )
    
 };
 
