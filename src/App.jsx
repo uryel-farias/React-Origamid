@@ -24,7 +24,7 @@ const mario = {
 };
 
 const App = () => {
-  const dados = mario;
+  const dados = luana;
 
   const total = dados.compras.map((item) => Number(item.preco.replace('R$ ',''))).reduce((a, b) => a + b);
 
@@ -33,7 +33,8 @@ const App = () => {
     <div>
       <p>Nome: {dados.cliente}</p>
       <p>Idade: {dados.idade}</p>
-      <p>Total: {dados.total}</p>
+      <p>Situação: {dados.ativa ? 'Ativa' : 'Inativa'}</p>
+      <p>Total: {total}</p>
     </div>
   )
    
